@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Safety Information in Hackney</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            background-color: #f4f8fb;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+        header a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+        }
+        ol, ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .chart-container {
+            text-align: center;
+        }
+        .crime-chart {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .chart-caption {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 8px 16px;
+            background: #2980b9;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .back-link:hover {
+            background: #3498db;
+        }
+        .area-photo {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Safety Information in Hackney</h1>
+        <a class="back-link" href="../index.html">← Back to the Map</a>
+    </header>
+    
+     <main>
+        <!-- Hackney景观图 -->
+        <img src="../images/Hackney_area.jpg" alt="View of Hackney" class="area-photo">
+
+    <section>
+        <h2>Crime Types and Rates</h2>
+        <ol>
+            <li>Violence Without Injury – Average: ~450/month; Peak: 549 (June 2023).</li>
+            <li>Theft from the Person – Average: ~550/month; Peak: 720 (April 2024).</li>
+            <li>Violence With Injury – Average: ~230/month; Peak: 329 (June 2023).</li>
+            <li>Other Theft – Average: ~450/month; Peak: 654 (June 2023).</li>
+            <li>Bicycle Theft – Average: ~110/month; Peak: 173 (October 2024).</li>
+        </ol>
+        
+        <h3>Key Trends:</h3>
+        <ul>
+            <li>Violent incidents cluster around Dalston and Shoreditch nightlife.</li>
+            <li>Bicycle theft is prevalent near parks and stations.</li>
+        </ul>
+    </section>
+    
+ <section>
+    <h2>Safety Advice</h2>
+    <ol>
+        <li>🔒 Lock bikes with two sturdy locks near Hackney Central.</li>
+        <li>🌙 Avoid walking alone in poorly lit areas like Mare Street after midnight.</li>
+        <li>🎧🚫 Refrain from wearing headphones while walking at night to stay alert.</li>
+        <li>🚶‍♀️💡 Use well-lit and busy routes when moving between university and accommodation.</li>
+        <li>⚠️💻 Stay sceptical of online rental offers that ask for deposits upfront without viewing.</li>
+    </ol>
+</section>
+
+    <section>
+        <h2>Crime Statistics Chart</h2>
+        <div class="chart-container">
+            <img src="../images/Hackney.PNG" alt="Offences in Hackney" class="crime-chart">
+        <p class="chart-caption">Offences in Hackney</p>
+    </div>
+    </section>
+</main>
+    
+    <footer>
+        <p>Data Sources: data.police.uk | Last updata: <span id="update-date"></span></p>
+    </footer>
+    
+    <script>
+        document.getElementById('update-date').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>
