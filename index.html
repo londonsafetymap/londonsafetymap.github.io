@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>London Safety Guide</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入Leaflet地图库 -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <a href="cover.html" style="position: fixed; top: 20px; right: 20px; z-index: 1000; color: white;">Back to Cover Page</a>
+        <h1>London Safety Guide</h1>
+        <p>Provide Safety Information for International Students</p>
+    </header>
+    
+    <div id="map-container">
+        <div id="map"></div>
+        <div id="info-panel">Hover to view information</div>
+    </div>
+    
+    <footer>
+        <p>Data sources: data.police.uk | Last updata: <span id="update-date"></span></p>
+    </footer>
+    
+    <!-- 引入JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

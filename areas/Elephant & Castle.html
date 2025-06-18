@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Safety Information in Elephant & Castle</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            background-color: #f4f8fb;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+        header a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+        }
+        ol, ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .chart-container {
+            text-align: center;
+        }
+        .crime-chart {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .chart-caption {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 8px 16px;
+            background: #2980b9;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .back-link:hover {
+            background: #3498db;
+        }
+        .area-photo {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Safety Information in Elephant & Castle</h1>
+        <a class="back-link" href="../index.html">← Back to the Map</a>
+    </header>
+    
+    <main>
+        <!-- Elephant & Castle景观图 -->
+        <img src="../images/Elephant castle_area.webp" alt="View of Elephant & Castle" class="area-photo">
+
+    <section>
+        <h2>Crime Types and Rates</h2>
+        <ol>
+            <li>Theft from the Person – Average: ~10/month; Peak: 24 (October 2024).</li>
+            <li>Other Theft – Average: ~5/month; Peak: 10 (October 2023).</li>
+            <li>Violence Without Injury – Average: ~5/month; Peak: 9 (November 2024).</li>
+            <li>Robbery of Personal Property – Average: ~2/month; Peak: 5 (March 2025).</li>
+            <li>Bicycle Theft – Average: ~2/month; Peak: 8 (September 2024).</li>
+        </ol>
+        
+        <h3>Key Trends:</h3>
+        <ul>
+            <li>The area is known for snatch thefts, especially targeting phones, wallets, and bags near the Elephant & Castle station, bus stops, and the shopping centre.</li>
+            <li>With a high student population and short-term rentals, some properties are targeted for break-ins, especially where security is weak.</li>
+        </ul>
+    </section>
+    
+    <section>
+    <h2>Safety Advice</h2>
+    <ol>
+        <li>📱👛 Keep phones, wallets, and other valuables out of sight, especially in crowded areas like Elephant & Castle station or shopping centres, to deter pickpockets.</li>
+        <li>🔒🪟 Always lock doors and windows, and avoid leaving valuables near windows.</li>
+        <li>🚲🔐 Use high-quality locks and park in designated, monitored areas to reduce the risk of theft, given the high rates of bicycle theft in the area.</li>
+        <li>🌙🚶‍♂️ If possible, avoid walking alone after dark, particularly near pubs or transport hubs, where incidents of violence and robbery are more frequent.</li>
+        <li>👥💡 If attending evening classes or events, walk in groups and stick to well-lit roads like Walworth Road or Newington Causeway. Avoid shortcuts through estates or alleys.</li>
+    </ol>
+    </section>
+
+    <section>
+        <h2>Crime Statistics Chart</h2>
+        <div class="chart-container">
+            <img src="../images/Elephant & Castle.png" alt="Offences in Elephant & Castle" class="crime-chart">
+        <p class="chart-caption">Offences in Elephant & Castle</p>
+    </div>
+    </section>
+</main>
+    
+    <footer>
+        <p>Data Sources: data.police.uk | Last updata: <span id="update-date"></span></p>
+    </footer>
+    
+    <script>
+        document.getElementById('update-date').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>

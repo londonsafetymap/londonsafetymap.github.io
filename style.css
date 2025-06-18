@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+#map-container {
+    display: flex;
+    margin: 1rem;
+}
+
+#map {
+    height: 70vh;
+    width: 80%;
+    border: 1px solid #ccc;
+}
+
+#info-panel {
+    width: 20%;
+    padding: 1rem;
+    background-color: #293e53; /* 深蓝背景 */
+    border: 1px solid #ddd;
+    color: #ffffff; /* 文字默认白色 */
+    border-radius: 8px; /* 圆角 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 阴影 */
+    font-family: Arial, sans-serif;
+}
+
+#info-panel h2 {
+    color: #ffd700 !important; 
+    margin-top: 0;
+}
+
+#info-panel strong {
+    color: #ffffff; /* “Crime Rate”变成金色 */
+}
+
+#info-panel p {
+    margin: 0.5rem 0;
+}
+
+#info-panel button, #info-panel a {
+    background-color: #ffffff; /* 按钮白底 */
+    color: #293e53; /* 深蓝字 */
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none; /* 去掉链接下划线 */
+    display: inline-block;
+    margin-top: 8px;
+    transition: background-color 0.3s ease;
+}
+
+#info-panel button:hover, #info-panel a:hover {
+    background-color: #ffd700; /* 悬停变金色 */
+    color: #293e53; /* 文字深蓝 */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ecf0f1;
+}
+.crime-chart {
+    max-width: 100%;  /* 图片最大不超过容器宽度 */
+    height: auto;    /* 高度自动按比例调整 */
+    display: block;  /* 消除图片底部间隙 */
+    margin: 0 auto;  /* 水平居中 */
+}
