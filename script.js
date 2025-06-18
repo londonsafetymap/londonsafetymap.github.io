@@ -51,23 +51,38 @@ const areas = [
 
 // 添加区域到地图
 areas.forEach(area => {
+    // 安全文件名转换函数
+    const getSafeFilename = (name) => {
+        return name.toLowerCase()
+            .replace(/&/g, 'and')      // 将"&"替换为"and"
+            .replace(/\s+/g, '-')      // 空格替换为连字符
+            .replace(/[',.]/g, '')     // 移除标点符号
+            .replace(/--+/g, '-')      // 多个连字符替换为单个
+            .replace(/^-|-$/g, '');    // 移除开头结尾的连字符
+    };
+
     const polygon = L.polygon(area.coords, {
         color: area.crimeRate === "High" ? 'red' : 'orange',
-        fillOpacity: 0.5
+        fillOpacity: 0.5,
+        className: `area-${getSafeFilename(area.name)}` // 添加可识别的类名
     }).addTo(map);
     
     // 悬停显示信息
     polygon.on('mouseover', () => {
+        const safeFilename = getSafeFilename(area.name);
         document.getElementById('info-panel').innerHTML = `
             <h3>${area.name}</h3>
             <p><strong>Crime Rate:</strong> ${area.crimeRate}</p>
             <p>${area.info}</p>
-            <button onclick="window.location.href='areas/${area.name.toLowerCase()}.html'">More Information</button>
+            <button onclick="window.location.href='areas/${safeFilename}.html'">
+                More Information
+            </button>
         `;
     });
     
     // 点击跳转
     polygon.on('click', () => {
-        window.location.href = `areas/${area.name.toLowerCase()}.html`;
+        const safeFilename = getSafeFilename(area.name);
+        window.location.href = `areas/${safeFilename}.html`;
     });
 });
