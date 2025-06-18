@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Safety Information in Tower Hamlets</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            background-color: #f4f8fb;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+        header a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+        }
+        ol, ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .chart-container {
+            text-align: center;
+        }
+        .crime-chart {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .chart-caption {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 8px 16px;
+            background: #2980b9;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .back-link:hover {
+            background: #3498db;
+        }
+        .area-photo {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Safety Information in Tower Hamlets</h1>
+        <a class="back-link" href="../index.html">← Back to the Map</a>
+    </header>
+    
+    <main>
+        <!-- Tower Hamlets景观图 -->
+        <img src="../images/Tower Hamlets_area.jpg" alt="View of Tower Hamlets" class="area-photo">
+    <section>
+        <h2>Crime Types and Rates</h2>
+        <ol>
+            <li>Violence Without Injury – Average: ~600/month; Peak: 671 (May 2025).</li>
+            <li>Theft from the Person – Average: ~260/month; Peak: 381 (August 2024).</li>
+            <li>Other Theft – Average: ~360/month; Peak: 464 (November 2023).</li>
+            <li>Violence With Injury – Average: ~230/month; Peak: 280 (December 2023).</li>
+            <li>Shoplifting – Average: ~200/month; Peak: 292 (May 2025).</li>
+        </ol>
+        
+        <h3>Key Trends:</h3>
+        <ul>
+            <li>Violent crime is high around Whitechapel and Brick Lane.</li>
+            <li>Theft peaks near busy markets and transport links.</li>
+        </ul>
+    </section>
+    
+    <section>
+        <h2>Safety Advice</h2>
+    <ol>
+        <li>👀 Stay vigilant in Whitechapel – avoid shortcuts through alleys at night.</li>
+        <li>💳🚫 Use card payments over cash to reduce robbery risk.</li>
+        <li>👥⚠️ Travel in groups near Aldgate East station, a hotspot for pickpocketing.</li>
+        <li>🔐📷 Install and use multi-locks, door cameras or building entry controls if possible.</li>
+        <li>🚫🗣️ Report any hate-related behaviour immediately and use university support services.</li>
+        <li>🔒📄 Never share banking or identity documents over the phone or email unless verified.</li>
+    </ol>
+
+    </section>
+    <section>
+        <h2>Crime Statistics Chart</h2>
+        <div class="chart-container">
+            <img src="../images/Tower Hamlets.png" alt="Offences in Tower Hamlets" class="crime-chart">
+        <p class="chart-caption">Offences in Tower Hamlets</p>
+    </div>
+    </section>
+</main>
+    
+    <footer>
+        <p>Data Sources: data.police.uk | Last updata: <span id="update-date"></span></p>
+    </footer>
+    
+    <script>
+        document.getElementById('update-date').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>
